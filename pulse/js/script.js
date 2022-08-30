@@ -33,10 +33,12 @@ const slider = tns({
 });
 
 document.querySelector('.prev').addEventListener('click', function () {
+    passive: true,
     slider.goTo('prev');
   });
 
 document.querySelector('.next').addEventListener('click', function () {
+    passive: true,
     slider.goTo('next');
   });
 
