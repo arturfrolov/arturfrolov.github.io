@@ -1,0 +1,67 @@
+.skills {
+    padding-top: 126px;
+    min-height: 1024px;
+    &__icon {
+        display: flex;
+        align-items: center;
+        min-height: 65px;
+    }
+    &__wrapper {
+        padding: 60px 10px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        grid-auto-rows: minmax(270px, auto);
+        gap: 13px 13px;
+        &-item {
+            padding: 30px 30px 25px 30px;
+            border: 1px solid #E0DDD8;
+        }
+        &-subtitle {
+            margin-top: 20px;
+        }
+        &-descr {
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__rating {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, minmax(70px, auto));
+        grid-auto-rows: minmax(70px, auto);
+        gap: 30px 45px;
+        &-item {
+            display: grid;
+            grid-template-columns: 250px 35px;
+            grid-template-rows: minmax(21px, auto) 14px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        &-title {
+            padding-left: 14px;
+            position: relative;
+            @include before_circle;
+            &:before {
+                top: -8px;
+            }
+        }
+        &-scale {
+            width: 350px;
+            height: 14px;
+            background-color: #E8E4DE;
+            border-radius: 4px;
+            span {
+                display: block;
+                height: 100%;
+                background-color: $main-color;
+                border-radius: 4px;
+            }
+        }
+        &-percentages {
+            font-weight: 500;
+        }
+    }
+}
